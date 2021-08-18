@@ -12,7 +12,7 @@ public class Elevator : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if(collider.gameObject.tag == "Red"){
             redEl.SetActive(true);
-            Destroy(MyCube);
+            MyCube.SetActive(false);
         }
         //if(collider.gameObject.tag == "RedE"){
         //    anim.Play();

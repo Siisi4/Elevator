@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CubeManager : MonoBehaviour
 {
-    // Si un object dans ma main est active, les hitbox cage invisible autour des cubes seront activées.
+    // Si un object dans ma main est active, les hitbox cages invisibles autour des cubes seront activées.
     
     public GameObject MyRed;
     public GameObject MyPurple;
@@ -17,13 +17,21 @@ public class CubeManager : MonoBehaviour
     public GameObject Wall4;
 
 
-    // Start is called before the first frame update
+    // PARTIE 2 (pour ne pas faire 2 scripts et tout faire dans un manager unique)
+    // On fait pareil mais pour les cubes sur l'elevator
+    // Si un objet sur l'elevator est active, les hitbox cages invisibles seront activées.
+    public GameObject ElevatorWalls;
+    public GameObject Red;
+    public GameObject Purple;
+    public GameObject Green;
+    public GameObject Blue;
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(MyRed.activeSelf || MyPurple.activeSelf || MyGreen.activeSelf || MyBlue.activeSelf){
@@ -38,6 +46,13 @@ public class CubeManager : MonoBehaviour
             Wall3.SetActive(false);
             Wall4.SetActive(false);
             
+        }
+
+        if(Red.activeSelf || Purple.activeSelf || Green.activeSelf || Blue.activeSelf){
+            ElevatorWalls.SetActive(true);
+
+        }else{
+            ElevatorWalls.SetActive(false);
         }
             
     }

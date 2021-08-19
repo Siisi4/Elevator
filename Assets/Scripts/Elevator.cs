@@ -6,6 +6,7 @@ public class Elevator : MonoBehaviour
 {
     public GameObject redEl;
     public GameObject MyCube;
+    public GameObject Light;
     //public Animation anim;
     
     // Start is called before the first frame update
@@ -13,6 +14,7 @@ public class Elevator : MonoBehaviour
         if(collider.gameObject.tag == "Red"){
             redEl.SetActive(true);
             MyCube.SetActive(false);
+            Light.SetActive(false);
         }
         //if(collider.gameObject.tag == "RedE"){
         //    anim.Play();

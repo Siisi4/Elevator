@@ -7,6 +7,7 @@ public class Cubes : MonoBehaviour
     public GameObject CubeRed;
 
     public GameObject MyRedCube;
+    public GameObject Light;
 
     //public Color MyColor;
 
@@ -24,6 +25,7 @@ public class Cubes : MonoBehaviour
             // Mon cube prend la couleur de l'objet
             //MyCube.GetComponent<Renderer>().material.color = MyColor;
             MyRedCube.SetActive(true);
+            Light.SetActive(true);
             Debug.Log("Object is picked up");
  
         }
